@@ -1,1 +1,3 @@
-# product_page
+# product_page_template
+
+CSS Variables
