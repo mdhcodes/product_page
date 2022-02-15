@@ -1,0 +1,320 @@
+@import url('https://fonts.googleapis.com/css2?family=Vujahday+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&display=swap');
+
+
+/* Custom Settings */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root {
+  --ff-sans: 'Zen Kaku Gothic Antique', sans-serif;
+  --ff-script: 'Vujahday Script', cursive;
+  --ff-serif: 'Cinzel', serif;
+
+  --clr-light: #fbcb82;
+  --clr-medium: #f79707;
+  --clr-honey: #efbd20;
+  --clr-flame: #fbe982;
+
+  --fw-light: 300;
+  --fw-reg: 400;
+  --fw-bold: 500;
+  --fw-dark: 600;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+
+  --bs-header: 0.2em 0.2em 0.6em rgba(239, 189, 32, 0.8),
+               0.1em 0.1em 0.3em rgba(239, 189, 32, 0.8);
+
+   --bs: 0.2em 0.2em 0.6em rgba(251, 203, 130, 0.8);
+}
+
+
+/* General Styles */
+
+body {
+  color: #2d2424;
+  font-family: var(--ff-sans);
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* Typography */
+
+.intro {
+  font-size: var(--fs-h1);
+}
+
+.intro h2 {
+  font-family: var(--ff-script);
+}
+
+.flame {
+  font-size: var(--fs-h3);
+  color: var(--clr-flame);
+}
+
+
+/* Buttons */
+
+.btn {
+  border: none;
+  background: var(--clr-light);
+  padding: 0.6em 1.5em;
+  border-radius: 3px;
+  transition: all .5s ease;
+}
+
+.btn:hover {
+  background: var(--clr-honey);
+}
+
+
+/* Header */
+
+.header-img {
+  width: 40px;
+  height: 40px;
+}
+
+.header {
+  width: 100%;
+  height: 100;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--bs-header);
+  background: #fff;
+  padding-left: 1em;
+  padding-right: 1.4em;
+  z-index: 1;
+}
+
+.logo {
+  font-family: var(--ff-serif);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.nav-link {
+  font-size: var(--fs-h3);
+  color: var(--clr-honey);
+  text-decoration: none;
+  padding: 1em;
+  font-weight: var(--fw-bold);
+  transition: all .5s ease;
+}
+
+.nav-link:hover {
+  background: var(--clr-honey);
+  color: #fff;
+  border-radius: 5px;
+}
+
+
+/* Main Content */
+
+.main {
+  margin-top: 8em;
+  max-width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+/* Intro Section */
+
+.title {
+  color: var(--clr-honey);
+  margin-left: 0.2em;
+  font-weight: bold;
+}
+
+.description {
+  color: var(--clr-light);
+  text-align: center;
+}
+
+
+/* Benefits Section */
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 1em;
+}
+
+.benefits {
+  min-width: 48%;
+  background: rgba(247, 151, 7, 0.5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: var(--bs);
+  padding-top: 1.2em;
+}
+
+.benefits h2 {
+  margin-bottom: 0.2em;
+}
+
+.benefits ul li {
+  list-style-type: none;
+  padding: 0.2em;
+}
+
+.bullet {
+  padding: 0 0.5em 0 0;
+  color: var(--clr-flame);
+  font-weight: bold;
+}
+
+.video-section {
+  min-width: 48%;
+  box-shadow: var(--bs);
+}
+
+.video {
+  width: 100%;
+}
+
+
+/* Pricing */
+
+.pricing {
+  margin-top: 4em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.packages {
+  min-width: 30%;
+  text-align: center;
+  border: 3px solid var(--clr-light);
+  margin: 1em;
+  box-shadow: var(--bs);
+}
+
+.packages h3 {
+  width: 100%;
+  background: rgba(247, 151, 7, 0.5);
+  padding: 0.5em;
+  margin: 0;
+}
+
+.packages p {
+  margin: 0.4em 0;
+}
+
+.packages button {
+  margin-top: 1.5em;
+  margin-bottom: 1em;
+}
+
+
+/* Submit Form */
+
+.form {
+  margin-top: 4em;
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+.email-label {
+  display: block;
+  font-size: 1.1em;
+  font-weight: bold;
+  margin-bottom: 0.4em;
+}
+
+input[type="email"] {
+  padding: 0.5em;
+}
+
+
+/* Media Queries */
+
+@media (max-width: 900px) {
+
+  .main {
+    margin-top: 11em;
+  }
+
+  .header {
+    flex-direction: column;
+    padding-bottom: 1em;
+  }
+
+  .title {
+    margin-left: 0;
+  }
+
+  .description {
+    font-size: var(--fs-h1);
+  }
+
+  .container {
+    max-width: 80%;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .benefits {
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+  }
+
+  .pricing {
+    flex-direction: column;
+    max-width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .form {
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #submit {
+    margin-top: 1em;
+  }
+
+}
+
+@media (max-width: 600px) {
+
+  .description {
+    font-size: 0.65em;
+  }
+
+  .benefits {
+    padding-right: 1em;
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+  }
+
+}
